@@ -2,8 +2,6 @@ package gmf
 
 /*
 
-#cgo pkg-config: libavcodec libavutil
-
 #include "libavutil/avutil.h"
 #include "libavutil/error.h"
 #include "libavutil/mathematics.h"

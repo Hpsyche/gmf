@@ -2,8 +2,6 @@ package gmf
 
 /*
 
-#cgo pkg-config: libswscale
-
 #include "libswscale/swscale.h"
 
 */

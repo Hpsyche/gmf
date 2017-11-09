@@ -2,8 +2,6 @@ package gmf
 
 /*
 
-#cgo pkg-config: libavcodec
-
 #include "libavcodec/avcodec.h"
 
 void shift_data(AVPacket *pkt, int offset) {

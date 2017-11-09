@@ -1,9 +1,6 @@
 package gmf
 
 /*
-
-#cgo pkg-config: libavformat
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <inttypes.h>

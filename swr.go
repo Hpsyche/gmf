@@ -5,8 +5,6 @@ package gmf
 
 /*
 
-#cgo pkg-config: libswresample
-
 #include "libswresample/swresample.h"
 #include <libavcodec/avcodec.h>
 #include <libavutil/frame.h>

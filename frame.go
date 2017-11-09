@@ -1,9 +1,6 @@
 package gmf
 
 /*
-
-#cgo pkg-config: libavcodec libavutil
-
 #include "libavcodec/avcodec.h"
 #include "libavutil/frame.h"
 #include "libavutil/imgutils.h"

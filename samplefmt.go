@@ -2,8 +2,6 @@ package gmf
 
 /*
 
-#cgo pkg-config: libavutil
-
 #include "libavutil/samplefmt.h"
 
 */

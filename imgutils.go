@@ -1,7 +1,6 @@
 package gmf
 
 /*
-#cgo pkg-config: libavcodec libavutil
 
 #include <stdint.h>
 #include <stdlib.h>

@@ -31,7 +31,6 @@ Sleepy Programmer <hunan@emsym.com>
 package gmf
 
 /*
-#cgo pkg-config: libavutil
 #include <libavutil/audio_fifo.h>
 #include <libavutil/frame.h>
 

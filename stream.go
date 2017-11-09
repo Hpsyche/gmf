@@ -2,8 +2,6 @@ package gmf
 
 /*
 
-#cgo pkg-config: libavformat
-
 #include "libavformat/avformat.h"
 
 */
