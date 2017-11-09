@@ -1,4 +1,5 @@
 ### Go FFmpeg Bindings 
+This is a forked version from [github.com/3d0c/gmf](https://github.com/3d0c/gmf) without references to pkgconfig.
 
 #### Status: `beta`
 It covers very basic avformat, avcodec and swscale features.    
@@ -16,40 +17,26 @@ There is one required option, which is disabled by default, you should turn on: 
 E.g.:
 
 ```sh
-./configure --prefix=/usr/local/ffmpeg --enable-shared
-make
+./configure --prefix=/usr/local/ffmpeg --enable-shared --enable-libvorbis
+make -j4
 make install
 ```
 
-Add pkgconfig path:
+Run exporting CGO paths:
 
 ```sh
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/ffmpeg/lib/pkgconfig/
+export CGO_CFLAGS="-I/usr/local/ffmpeg/include"
+export CGO_LDFLAGS="-L/usr/local/ffmpeg/lib -lavcodec -lavutil -lavformat -lavdevice -lavfilter -lswresample -lswscale"
 ```
 
-Ensure, that `PKG_CONFIG_PATH` contains path to ffmpeg's pkgconfig folder.
+Then just run
 
 ```sh
-# check it by running
-pkg-config --libs libavformat
+go get github.com/aimlabmu/gmf
 ```
-
-It should print valid path to the avformat library.  
-
-Now, just run
-
-```sh
-go get github.com/3d0c/gmf
-```
-
-##### Other methods
-This package uses pkg-config way to obtain flags, includes and libraries path, so if you have ffmpeg installed, just ensure, that your installation has them (pkgconfig/ folder with proper `pc` files).
 
 #### Usage
 Please see [examples](examples/) and tests. 
 
-#### Support and Contribution
-If something doesn't work, just fix it. Do not hesitate to pull request.
-
 #### Credits
-I borrowed the name from project, abandoned on code.google.com/p/gmf. Original code is available here in intitial commit from 03 Apr 2013.
+Abandoned project on code.google.com/p/gmf. Original code is available at [github.com/3d0c/gmf](https://github.com/3d0c/gmf) in intitial commit from 03 Apr 2013.
