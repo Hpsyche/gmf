@@ -31,7 +31,7 @@ func (this *Stream) DumpContexCodec(codec *CodecCtx) {
 }
 
 func (this *Stream) SetCodecFlags() {
-	this.avStream.codec.flags |= C.CODEC_FLAG_GLOBAL_HEADER
+	this.avStream.codec.flags |= C.AV_CODEC_FLAG_GLOBAL_HEADER
 }
 
 func (this *Stream) CodecCtx() *CodecCtx {
